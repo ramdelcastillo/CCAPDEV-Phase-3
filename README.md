@@ -35,7 +35,7 @@ Make sure to install the following before running the file:
    npm i express express-handlebars body-parser mongoose hbs
    ```
 
-    ![npmexpress]([InfoSecPh\InfoSecPh\public\images\screenshot2.png](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d))
+    ![npmexpress](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d)
 
 5. Open the MongoDB Compass Application
   ![mongodb](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/e8b460fe-3662-4fd3-85d5-1edf35f278e1)
