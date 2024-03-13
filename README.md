@@ -38,34 +38,34 @@ Make sure to install the following before running the file:
     ![npmexpress]([InfoSecPh\InfoSecPh\public\images\screenshot2.png](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d))
 
 5. Open the MongoDB Compass Application
-  ![mongodb](InfoSecPh\InfoSecPh\public\images\screenshot3.png)
+  ![mongodb](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/e8b460fe-3662-4fd3-85d5-1edf35f278e1)
 
 6. Press Connect in the MongoDB Compass
-  ![mongodbmain](InfoSecPh\InfoSecPh\public\images\screenshot4.png)
+  ![mongodbmain](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/604881ca-9266-4b05-8856-adad098465b7)
 
 7. Input the command below to run the application
     ```sh
     node server.js
     ```
-    ![listeningport3000](InfoSecPh\InfoSecPh\public\images\screenshot5.png)
+    ![listeningport3000](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/29cd3ece-1212-4f96-95b6-b0d942cff302)
 
     Notice that MongoDB Compass will be updated with the server database with 4 collections<br>
-    ![mongodb-changed](InfoSecPh\InfoSecPh\public\images\screenshot6.png)
+    ![mongodb-changed](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/f9af2fa9-a866-409d-be94-1b3f03052a10)
 
 8. In MongoDB, click the comments collection and click add data. Under Add data, click Import JSON or CSV file<br>
-  ![mongodbcollection](InfoSecPh\InfoSecPh\public\images\screenshot7.png)
+  ![mongodbcollection](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/727defdd-4de3-40ab-ac5e-54382a1f9e40)
 
 9. Navigate to the folder and find 'data' folder. Select the appropriate JSON file.<br>
-  ![datafolder](InfoSecPh\InfoSecPh\public\images\screenshot8.png)
+  ![datafolder](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/fc6647d8-55d1-47af-8e7a-b28a03d2eb20)
 
 10. Click Import.<br>
-  ![importfile](InfoSecPh\InfoSecPh\public\images\screenshot9.png)
+  ![importfile](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/1684e93a-3288-40d1-ab6b-e461bd464854)
 
 11. Repeat steps 8-10 to the remaining collections in the MongoDB<br>
-  ![mongodb-after](InfoSecPh\InfoSecPh\public\images\screenshot10.png)
+  ![mongodb-after](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/1b92008d-3445-4b86-903c-c6b032329f24)
 
 12. Input the local address in the web browser. The application should load.<br>
-  ![local3000](InfoSecPh\InfoSecPh\public\images\screenshot11.png)
+  ![local3000](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/730fa8e8-f81e-4398-9b7e-82afe5953e80)
 
 ### **Note that some features are yet to be implemented.**
 
@@ -74,10 +74,10 @@ Make sure to install the following before running the file:
 ## Usage
 
 Below are some of the screenshots of the application<br>
- ![sample1](InfoSecPh\InfoSecPh\public\images\sample1.png)
- ![sample2](InfoSecPh\InfoSecPh\public\images\sample2.png)
- ![sample3](InfoSecPh\InfoSecPh\public\images\sample3.png)
- ![sample4](InfoSecPh\InfoSecPh\public\images\sample4.png)
+ ![sample1](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/30b3b402-1dec-450b-be30-4016f7a178f1)
+ ![sample2](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/25da73f8-9942-413c-b290-25269976e2b8)
+ ![sample3](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/a3400d01-828c-497a-a803-9d2b37c115bb)
+ ![sample4](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/422b2310-2f95-4662-a665-34398fbab369)
 
 
 
