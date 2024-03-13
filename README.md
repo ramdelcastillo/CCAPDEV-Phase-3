@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## INFOSECPH Web Forum Application
 
-![Infosecph1](InfoSecPh\InfoSecPh\public\images\infosec-main.png)<br>
+![infosec-main](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/87148bdb-d687-4255-a2d8-7c28fcfbfdb9)<br>
 ![Infosecph](InfoSecPh\InfoSecPh\public\images\infosec-user.png)
 
 The **INFOSECPH Web Forum Application** is a forum for cyber security in the Philippines to make it easier to find jobs, opportunities, and general to specific information regarding the information security field in the country. This alleviate the limitation of going through a forum website such as Reddit where the information is diverse and  help people interested in cyber security to go through a forum where the information regarding cyber security is consolidated and accessible. Another goal of this cyber security forum is to promote and build a community for cyber security professionals and enthusiasts in the Philippines.
