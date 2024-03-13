@@ -2,7 +2,7 @@
 ## INFOSECPH Web Forum Application
 
 ![infosec-main](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/87148bdb-d687-4255-a2d8-7c28fcfbfdb9)<br>
-![Infosecph](InfoSecPh\InfoSecPh\public\images\infosec-user.png)
+![infosec-user](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/9eaf3641-2f85-4578-83bb-57a23542eab9)
 
 The **INFOSECPH Web Forum Application** is a forum for cyber security in the Philippines to make it easier to find jobs, opportunities, and general to specific information regarding the information security field in the country. This alleviate the limitation of going through a forum website such as Reddit where the information is diverse and  help people interested in cyber security to go through a forum where the information regarding cyber security is consolidated and accessible. Another goal of this cyber security forum is to promote and build a community for cyber security professionals and enthusiasts in the Philippines.
 
@@ -28,14 +28,14 @@ Make sure to install the following before running the file:
    npm init
    ```
 3. Press Enter key until the end of utility application and type yes at the end <br>
-  ![npminit](InfoSecPh\InfoSecPh\public\images\screenshot1.png)
+  ![npminit](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5e5b3dc5-6fde-48c1-a353-cfc603680402)
   
 4. Input the command to install the packages needed
    ```sh
    npm i express express-handlebars body-parser mongoose hbs
    ```
 
-    ![npmexpress](InfoSecPh\InfoSecPh\public\images\screenshot2.png)
+    ![npmexpress]([InfoSecPh\InfoSecPh\public\images\screenshot2.png](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d))
 
 5. Open the MongoDB Compass Application
   ![mongodb](InfoSecPh\InfoSecPh\public\images\screenshot3.png)
