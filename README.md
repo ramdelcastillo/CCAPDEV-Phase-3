@@ -34,6 +34,9 @@ Make sure to install the following before running the file:
    ```sh
    npm i express express-handlebars body-parser mongoose hbs
    ```
+   ```sh
+   npm i bcrypt passport passport-local express-session express-flash dotenv method-override
+   ```
 
     ![npmexpress](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d)
 
