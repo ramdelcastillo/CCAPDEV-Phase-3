@@ -114,7 +114,8 @@ Below are some of the screenshots of the application<br>
  ![image](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/2768588c-e55f-4f3a-844d-a9e199058bac)
  ![userlog](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/ee282a8c-7261-42d7-97bf-fc77874645f9)
  ![viewgio](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/42a5439d-1550-44e6-bd0f-b8062a77c313)
- ![aboutus](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/20c7d780-b25c-4287-9929-1a53b5178770)
+ ![image](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/0dc7221c-f0b3-4e0f-a47a-fe8d8999bf64)
+
 
 
 
