@@ -68,28 +68,52 @@ Make sure to install the following before running the file:
 12. Input the local address in the web browser. The application should load.<br>
   ![local3000](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/730fa8e8-f81e-4398-9b7e-82afe5953e80)
 
-13. To create an account, click sign up on the upper right part of the application.
-14. Fill out the form to create a user.
+# Enjoy and communicate with cybersecurity enthusiasts all over the world!
+
+* Create an account by clicking sign up on the upper right part of the application!
+    ![previewmain](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/2f465ca6-ee3c-4c93-868d-4b0dbb4f1d88)
+
+* Fill out the form to create a user.
     ![signup](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/ff68b5b3-b26a-4f52-bdb3-0346c46b75d0)
     
-15. To log in, click log-in located on the upper part of the application.
+* Log in to your account to maximize your cybersecurity forum experience! Log-in button is located on the upper right corner of the program.
     ![login](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/03322f69-c89e-4e7c-89c4-6064f4886936)
     
-16. To add a friend, click the user and click Add Friend.
-    ![addfriend](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/62fd560c-a5a9-4052-bf4f-17d951e032f8)
+* Want to make friends to other users? Click the user and click Add Friend! 
+    ![addfriendnaz](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/bda4bf44-68da-4803-b396-3a54eda8451c)
+  
+* Edit your profile and make your own bio!
+   ![changeuseropt](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/0e59b1bd-7f26-473b-b38b-51ea980245aa)
 
+* Comment to other posts by clicking the post and type your comments.
+  ![comment](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/ba8b70c7-f635-4e51-92b7-136867ae719c)
 
-### **Note that some features are yet to be implemented.**
+* Check out your posts by clicking on your profile on the upper right corner 
+   ![currentprofile](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/6fd46fdd-5216-4394-b094-bc2b9915afb6)
+
+* Want to edit your post? Edit your post by clicking on view post and click on the 3 dots on the upper right corner of your post!
+  ![editfunction](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/190db9c4-5d42-44c1-87d1-11e1090d5106)
+
+* You can also delete your post by clicking delete post just below the edit post option
+* Check out the preferred boards to sort tags
+  ![preferredboards](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/a08cd0be-7829-4600-a498-5b6c19f7bd8d)
+
+* Create post to let others see your insights!
+  ![createpost](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/c25ada8b-1dbb-4de8-803a-f46fd9fa5566)
+
+* View the list of friends by hovering to the left side of the screen and click Friends. You may also unfriend your friend.
+  ![friendlist](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/46caa73b-5aa7-47a0-b22f-61cbc40767fa)
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Below are some of the screenshots of the application<br>
- ![sample1](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/30b3b402-1dec-450b-be30-4016f7a178f1)
- ![sample2](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/25da73f8-9942-413c-b290-25269976e2b8)
- ![sample3](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/a3400d01-828c-497a-a803-9d2b37c115bb)
- ![sample4](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/422b2310-2f95-4662-a665-34398fbab369)
+ ![overallmain](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/5ae70612-616f-4e66-b2cf-ee0041746ad0)
+ ![userlog](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/ee282a8c-7261-42d7-97bf-fc77874645f9)
+ ![viewgio](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/42a5439d-1550-44e6-bd0f-b8062a77c313)
+ ![aboutus](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/20c7d780-b25c-4287-9929-1a53b5178770)
+
 
 
 
