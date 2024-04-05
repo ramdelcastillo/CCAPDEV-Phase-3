@@ -27,7 +27,7 @@ Make sure to install the following before running the file:
    ```sh
    npm init
    ```
-3. Press Enter key until the end of utility application and type yes at the end <br>
+3. Press the Enter key until the end of the utility application and type yes at the end <br>
   ![npminit](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5e5b3dc5-6fde-48c1-a353-cfc603680402)
   
 4. Input the command to install the packages needed
@@ -36,7 +36,7 @@ Make sure to install the following before running the file:
    npm i bcrypt passport passport-local express-session express-flash dotenv method-override
    ```
 
-    ![npmexpress](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5cebc495-6ea3-4d56-bfa1-5cf20e059c3d)
+    ![apdevmodules](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/985b5a71-6336-4bc3-baa5-e881247e1772)
 
 5. Open the MongoDB Compass Application
   ![mongodb](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/e8b460fe-3662-4fd3-85d5-1edf35f278e1)
@@ -67,6 +67,17 @@ Make sure to install the following before running the file:
 
 12. Input the local address in the web browser. The application should load.<br>
   ![local3000](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/730fa8e8-f81e-4398-9b7e-82afe5953e80)
+
+13. To create an account, click sign up on the upper right part of the application.
+14. Fill out the form to create a user.
+    ![signup](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/ff68b5b3-b26a-4f52-bdb3-0346c46b75d0)
+    
+15. To log in, click log-in located on the upper part of the application.
+    ![login](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/03322f69-c89e-4e7c-89c4-6064f4886936)
+    
+16. To add a friend, click the user and click Add Friend.
+    ![addfriend](https://github.com/ramdelcastillo/CCAPDEV-Phase-3/assets/91410042/62fd560c-a5a9-4052-bf4f-17d951e032f8)
+
 
 ### **Note that some features are yet to be implemented.**
 
