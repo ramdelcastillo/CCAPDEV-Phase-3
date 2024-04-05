@@ -31,9 +31,7 @@ Make sure to install the following before running the file:
   ![npminit](https://github.com/ramdelcastillo/CCAPDEV-Phase-2/assets/91018988/5e5b3dc5-6fde-48c1-a353-cfc603680402)
   
 4. Input the command to install the packages needed
-   ```sh
-   npm i express express-handlebars body-parser mongoose hbs
-   ```
+
    ```sh
    npm i bcrypt passport passport-local express-session express-flash dotenv method-override
    ```
