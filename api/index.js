@@ -11,7 +11,7 @@ const server = express();
 const path = require('path');
 
 // ✅ Use absolute paths for project files
-const helper = require(path.join(__dirname, '../components/hbsHelpers.js'));
+const helper = require('../components/hbsHelpers.js');
 
 const methodOverride = require('method-override');
 const flash = require('express-flash');
