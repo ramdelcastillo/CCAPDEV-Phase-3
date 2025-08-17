@@ -10,7 +10,6 @@ const express = require('express');
 const server = express();
 const path = require('path');
 
-// ✅ Use absolute paths for project files
 const helper = require('../components/hbsHelpers.js');
 
 const methodOverride = require('method-override');
@@ -22,19 +21,16 @@ const jwt = require('jsonwebtoken');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 
-// ✅ Routers
 const logRouter = require(path.join(__dirname, '../controller/log.js'));
 const profileRouter = require(path.join(__dirname, '../controller/profile.js'));
 const communityRouter = require(path.join(__dirname, '../controller/community.js'));
 const postRouter = require(path.join(__dirname, '../controller/post.js'));
 const actionRouter = require(path.join(__dirname, '../controller/action.js'));
 
-// ✅ Models
 const userModel = require(path.join(__dirname, '../model/schema/users.js'));
 const postModel = require(path.join(__dirname, '../model/schema/posts.js'));
 const communityModel = require(path.join(__dirname, '../model/schema/community.js'));
 
-// ✅ Passport config
 const initializePassport = require(path.join(__dirname, '../public/commons/javascripts/passport-config.js'));
 initializePassport(passport);
 
@@ -72,11 +68,9 @@ server.engine(
   })
 );
 
-// ✅ Views + static files must use absolute paths
 server.set('views', path.join(__dirname, '../views'));
 server.use(express.static(path.join(__dirname, '../public')));
 
-// ✅ Mongo connection with reuse
 const mongoose = require('mongoose');
 let isConnected = false;
 
@@ -204,18 +198,15 @@ function checkAuthenticated(req, res, next) {
   }
 }
 
-// ✅ Routers
 server.use('/log', logRouter);
 server.use('/profile', profileRouter);
 server.use('/community', communityRouter);
 server.use('/post', postRouter);
 server.use('/action', actionRouter);
 
-// ✅ Error handler for debugging
 server.use((err, req, res, next) => {
   console.error('🔥 Express error:', err.stack || err);
   res.status(500).send('Something broke: ' + err.message);
 });
 
-// ✅ Export for Vercel (no listen here)
 module.exports = server;
