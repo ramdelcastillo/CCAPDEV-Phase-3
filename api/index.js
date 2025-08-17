@@ -6,6 +6,8 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
+console.log('MONGO_URI on Vercel:', process.env.MONGO_URI ? '✅ found' : '❌ missing');
+
 const express = require('express');
 const server = express();
 const path = require('path');
