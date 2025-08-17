@@ -6,9 +6,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-
-
-
 const express = require('express');
 const server = express();
 const path = require('path');
@@ -206,14 +203,6 @@ function checkAuthenticated(req, res, next) {
     res.redirect('/log/login');
   }
 }
-
-server.get('/check-mongo', (req, res) => {
-  if (process.env.MONGO_URI) {
-    res.send('✅ MONGO_URI exists');
-  } else {
-    res.send('❌ MONGO_URI missing');
-  }
-});
 
 // ✅ Routers
 server.use('/log', logRouter);
