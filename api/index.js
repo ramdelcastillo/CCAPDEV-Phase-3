@@ -211,7 +211,5 @@ server.use('/community', communityRouter)
 server.use('/post', postRouter)
 server.use('/action', actionRouter)
 
-const port = process.env.PORT | 3000
-server.listen(port, function(){
-  console.log('Listening to port ' + port)
-})
+module.exports = server;
+
