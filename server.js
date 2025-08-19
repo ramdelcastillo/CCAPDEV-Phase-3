@@ -10,7 +10,7 @@ const express = require('express');
 const server = express();
 const path = require('path');
 
-const helper = require('../components/hbsHelpers.js');
+const helper = require('./components/hbsHelpers.js');
 
 const methodOverride = require('method-override');
 const flash = require('express-flash');
