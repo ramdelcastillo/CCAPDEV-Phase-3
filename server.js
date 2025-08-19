@@ -204,9 +204,8 @@ server.use('/community', communityRouter);
 server.use('/post', postRouter);
 server.use('/action', actionRouter);
 
-server.use((err, req, res, next) => {
-  console.error('🔥 Express error:', err.stack || err);
-  res.status(500).send('Something broke: ' + err.message);
-});
+const PORT = process.env.PORT || 5000;
 
-module.exports = server;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
