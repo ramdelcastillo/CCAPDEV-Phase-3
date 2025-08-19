@@ -1,16 +1,14 @@
 // Install Command:
 // npm init
-// npm i express express-handlebars body-parser mongoose hbs bcrypt passport passport-local express-session express-flash dotenv method-override
+// npm i express express-handlebars body-parser mongoose hbs bcrypt passport passport-local express-session express-flash dotenv method-override jsonwebtoken
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
 const express = require('express');
-const server = express();
 const path = require('path');
-
-const helper = require('./components/hbsHelpers.js');
+const server = express();
 
 const methodOverride = require('method-override');
 const flash = require('express-flash');
@@ -20,18 +18,22 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
+const hbsHelpers = require('./components/hbsHelpers.js');
 
-const logRouter = require(path.join(__dirname, '../controller/log.js'));
-const profileRouter = require(path.join(__dirname, '../controller/profile.js'));
-const communityRouter = require(path.join(__dirname, '../controller/community.js'));
-const postRouter = require(path.join(__dirname, '../controller/post.js'));
-const actionRouter = require(path.join(__dirname, '../controller/action.js'));
+// Routers
+const logRouter = require('./controller/log.js');
+const profileRouter = require('./controller/profile.js');
+const communityRouter = require('./controller/community.js');
+const postRouter = require('./controller/post.js');
+const actionRouter = require('./controller/action.js');
 
-const userModel = require(path.join(__dirname, '../model/schema/users.js'));
-const postModel = require(path.join(__dirname, '../model/schema/posts.js'));
-const communityModel = require(path.join(__dirname, '../model/schema/community.js'));
+// Models
+const userModel = require('./model/schema/users.js');
+const postModel = require('./model/schema/posts.js');
+const communityModel = require('./model/schema/community.js');
 
-const initializePassport = require(path.join(__dirname, '../public/commons/javascripts/passport-config.js'));
+// Passport initialization
+const initializePassport = require('./public/commons/javascripts/passport-config.js');
 initializePassport(passport);
 
 // Middleware
@@ -54,23 +56,22 @@ server.use(passport.initialize());
 server.use(passport.session());
 
 // View engine
-const hbs = require('hbs');
 server.set('view engine', 'hbs');
 server.engine(
   'hbs',
   handlebars.engine({
     extname: 'hbs',
     helpers: {
-      if_cond: helper.if_cond,
-      isInCollection: helper.isInCollection,
-      isSameId: helper.isSameId,
+      if_cond: hbsHelpers.if_cond,
+      isInCollection: hbsHelpers.isInCollection,
+      isSameId: hbsHelpers.isSameId,
     },
   })
 );
+server.set('views', path.join(__dirname, 'views'));
+server.use(express.static(path.join(__dirname, 'public')));
 
-server.set('views', path.join(__dirname, '../views'));
-server.use(express.static(path.join(__dirname, '../public')));
-
+// MongoDB connection
 const mongoose = require('mongoose');
 let isConnected = false;
 
@@ -89,11 +90,10 @@ async function connectDB() {
 }
 connectDB();
 
-// Utility functions
+// Utility function
 function sortedDate(array, limit) {
   const sortedArray = array.sort((a, b) => new Date(b.date) - new Date(a.date));
-  if (limit !== undefined) return sortedArray.slice(0, limit);
-  return sortedArray;
+  return limit ? sortedArray.slice(0, limit) : sortedArray;
 }
 
 // Routes
@@ -101,7 +101,6 @@ server.get('/', async (req, res) => {
   try {
     const searchQuery = {};
     let leanUser;
-
     const community_data = await communityModel.find(searchQuery).lean();
     const post_data = await postModel.find(searchQuery).populate('uid').populate('cid').lean();
     const top_posts = await postModel.aggregate([
@@ -111,18 +110,16 @@ server.get('/', async (req, res) => {
       { $limit: 5 },
     ]);
 
-    if (req.user) {
-      leanUser = req.user.toObject();
-    }
+    if (req.user) leanUser = req.user.toObject();
 
     const posts = sortedDate(post_data);
 
     res.render('main', {
       layout: 'index',
       title: 'InfoSec',
-      posts: posts,
+      posts,
       log: leanUser,
-      top_posts: top_posts,
+      top_posts,
       recent_posts: sortedDate(post_data, 5),
       communityHeader: community_data,
     });
@@ -134,13 +131,10 @@ server.get('/', async (req, res) => {
 
 server.get('/search', async (req, res) => {
   try {
-    const query = req.query.query;
+    const query = req.query.query || '';
     const searchQuery = {};
-
     let leanUser;
-    if (req.user) {
-      leanUser = req.user.toObject();
-    }
+    if (req.user) leanUser = req.user.toObject();
 
     const community_data = await communityModel.find(searchQuery).lean();
     const post_data = await postModel.find(searchQuery).populate('uid').populate('cid').lean();
@@ -152,16 +146,15 @@ server.get('/search', async (req, res) => {
     ]);
 
     const filtered_posts = post_data.filter((post) => {
-      const postTitle = post.title.toString().toLowerCase();
-      const username = post.uid.username.toString().toLowerCase();
+      const postTitle = post.title.toLowerCase();
+      const username = post.uid.username.toLowerCase();
       const queryString = query.toLowerCase();
 
       const matchesTitle = postTitle.includes(queryString);
       const matchesUsername = username.includes(queryString);
-      const matchesCommunity = post.cid.some((community) => {
-        const community_name = community.community_name.toString().toLowerCase();
-        return community_name.includes(queryString);
-      });
+      const matchesCommunity = post.cid.some((community) =>
+        community.community_name.toLowerCase().includes(queryString)
+      );
 
       return matchesTitle || matchesUsername || matchesCommunity;
     });
@@ -171,7 +164,7 @@ server.get('/search', async (req, res) => {
       title: 'InfoSec',
       posts: filtered_posts,
       log: leanUser,
-      top_posts: top_posts,
+      top_posts,
       recent_posts: sortedDate(post_data, 5),
       communityHeader: community_data,
     });
@@ -183,29 +176,30 @@ server.get('/search', async (req, res) => {
 
 server.delete('/logout', checkAuthenticated, (req, res, next) => {
   req.logOut((err) => {
-    if (err) {
-      return next(err);
-    }
+    if (err) return next(err);
     res.redirect('/');
   });
 });
 
 function checkAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  } else {
-    res.redirect('/log/login');
-  }
+  if (req.isAuthenticated()) return next();
+  res.redirect('/log/login');
 }
 
+// Mount routers
 server.use('/log', logRouter);
 server.use('/profile', profileRouter);
 server.use('/community', communityRouter);
 server.use('/post', postRouter);
 server.use('/action', actionRouter);
 
-const PORT = process.env.PORT || 5000;
-
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Error handler
+server.use((err, req, res, next) => {
+  console.error('🔥 Express error:', err.stack || err);
+  res.status(500).send('Something broke: ' + err.message);
 });
+
+// Start server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
